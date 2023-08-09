@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="darkMode.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1><b>Where in the world?</b></h1>
+        <button id="darkMode">
+            <img src="design/moon.png" alt="moon" width="12" id="moon">
+            <h3>Dark Mode</h3>
+        </button>
+    </header>
+    <main>
+        
+        <div class="mainPage">
+            <div class="input">
+                <input type="text" placeholder="Search for a country..." id="countrySearch" name="countrySearch">
+                <select name="regionSelect" id="regionSelect">
+                    <option selected disabled hidden>Filter by Region</option>
+                    <option value="asia">Asia</option>
+                    <option value="africa">Africa</option>
+                    <option value="america">America</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </div>
+            <div class="flags" id="flags">
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>

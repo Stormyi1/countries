@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="detail.js" defer></script>
+    <script src="darkMode.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1><b>Where in the world?</b></h1>
+        <button id="darkMode">
+            <img src="design/moon.svg" alt="moon" width="12" id="moon">
+            <h3>Dark Mode</h3>
+        </button>
+    </header>
+    <main>
+        <div class="detail">
+            <div class="top">
+                <a href="index.html">
+                    <button class="defaultButton" id="backBtn">
+                        <img src="design/back.png" alt="" width="12" id="backArrow">
+                        Back
+                    </button>
+                </a>
+            </div>
+            <div class="left">
+                <img src="https://i1.wp.com/gelatologia.com/wp-content/uploads/2020/07/placeholder.png?ssl=1" alt=""
+                    width="100%" id="flag">
+            </div>
+            <div class="right">
+                <div>
+                    <h1 id="countryName">Germany</h1>
+                    <div class="infoContainer">
+                        <div class="infos">
+                            <div>
+                                <p id="native"></p>
+                                <p id="pop"></p>
+                                <p id="region"></p>
+                                <p id="sub-region"></p>
+                                <p id="capital"></p>
+                            </div>
+                            <div>
+                                <p id="domain"></p>
+                                <p id="cur"></p>
+                                <p id="languages"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="borderContainer">
+                            <p><b>Border Countries:</b>
+                                <div id="borderCountries">
+                                </div>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,600;6..12,800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    background: hsl(0, 0%, 98%);
+}
+img{
+    background: transparent !important;
+}
+
+header{
+    height: 75px;
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(128, 128, 128, 15%);
+}
+header h1{
+    margin-left: 5vw;
+}
+header h3{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+header button{
+    border: none;
+    background-color: transparent;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-right: 5vw;
+    cursor: pointer;
+}
+.mainPage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 75px);
+}
+.input{
+    width: 90vw;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.input>*{
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+.input>input[type="text"]{
+    padding: 10px 25vw 10px 10px;
+}
+.input>select{
+    padding: 10px 5vw 10px 10px;
+}
+.input>select:focus,
+.input input:focus
+{
+    outline: none;
+}
+.flags{
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    gap: 80px;
+}
+.item{
+    margin-top: 50px;
+}
+.item img{
+    width: 250px;
+    height: 150px;
+}
+.itemContent{
+    width: 250px;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.itemContent p,
+.itemContent h3{
+    margin-left: 10%;
+}
+.item img{
+    display: block;
+}
+.nostyle{
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+
+.darkColor *{
+    color: white !important;
+}
+
+.darkBackElement input,
+.darkBackElement button, 
+.darkBackElement .input select,
+.darkBackElement .input option,
+.darkBackElement header *,
+.darkBackElement header{
+    background: hsl(209, 23%, 22%) !important;
+}
+
+.darkBack, .darkBack * :not(img, input, button, header *, header){
+    background: hsl(207, 26%, 17%) !important;
+}
+
+
