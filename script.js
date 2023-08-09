@@ -16,7 +16,7 @@ function AppendAll(y){
         const countryName = document.createElement("h3")
         countryName.innerText = y[i]["name"]["common"]
         const population = document.createElement("p")
-        population.innerHTML = `<b>Population:</b> ${y[i]["population"]}`
+        population.innerHTML = `<b>Population:</b> ${y[i]["population"].toLocaleString()}`
         const continent = document.createElement("p")
         continent.innerHTML = `<b>Region:</b> ${y[i]["continents"]}`
         const capital = document.createElement("p")
