@@ -41,6 +41,7 @@ header button{
     flex-direction: column;
     width: 100vw;
     height: calc(100vh - 75px);
+    overflow-x: hidden;
 }
 .input{
     width: 90vw;
@@ -49,16 +50,43 @@ header button{
     justify-content: space-between;
     margin-top: 40px;
 }
-.input>*{
+.input>div>*,
+.input>select{
     padding: 10px 15px 10px 15px;
     border-radius: 5px;
     border: none;
+    margin-bottom: 50px;
 }
-.input>input[type="text"]{
-    padding: 10px 25vw 10px 10px;
+.input>div{
+    display: flex;
+    align-items: center;
 }
+#mag{
+    position: absolute;
+    opacity: 0;
+    transition: all .5s ease;
+}
+.input>div>input[type="text"]{
+    padding: 15px 7.5vw 15px 15px;
+    transition: padding 1s ease;
+    box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.1);
+}
+.input>div>input[type="text"]:focus{
+    padding: 15px 7.5vw 15px 45px;
+    transition: padding 1s ease;
+}
+.input>div>input[type="text"]:focus + #mag{
+    opacity: 1;
+    transition: all 1s ease;
+}
+
 .input>select{
-    padding: 10px 5vw 10px 10px;
+    padding: 15px 5vw 15px 10px;
+    box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 16px 1px rgba(0,0,0,0.1);
 }
 .input>select:focus,
 .input input:focus
@@ -71,23 +99,33 @@ header button{
     width: 90vw;
     gap: 80px;
 }
-.item{
-    margin-top: 50px;
-}
 .item img{
     width: 250px;
     height: 150px;
+    border-radius: 5px 5px 0 0;
 }
 .itemContent{
     width: 250px;
     height: 150px;
     margin: 0;
     padding: 0;
-    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 1px 7px 13px 1px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 1px 7px 13px 1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 1px 7px 13px 1px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+}
+
+button:active,
+select:active{
+    transform: scale(.98);
+}
+
+button{
+    cursor: pointer;
 }
 .itemContent p,
 .itemContent h3{
@@ -114,8 +152,13 @@ header button{
 .darkBackElement .input select,
 .darkBackElement .input option,
 .darkBackElement header *,
-.darkBackElement header{
+.darkBackElement header,
+.darkBackElement .itemContent,
+.darkBackElement .itemContent *{
     background: hsl(209, 23%, 22%) !important;
+}
+.darkBackElement #mag{
+    filter:invert(100%);
 }
 
 .darkBack, .darkBack * :not(img, input, button, header *, header){

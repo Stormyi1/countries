@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="darkMode.js" defer></script>
 </head>
+
 <body>
     <header>
         <h1><b>Where in the world?</b></h1>
@@ -18,10 +20,13 @@
         </button>
     </header>
     <main>
-        
+
         <div class="mainPage">
             <div class="input">
-                <input type="text" placeholder="Search for a country..." id="countrySearch" name="countrySearch">
+                <div>
+                    <input type="text" placeholder="Search for a country..." id="countrySearch" name="countrySearch">
+                    <img src="design/mag_glass.svg" alt="lupe" id="mag">
+                </div>
                 <select name="regionSelect" id="regionSelect">
                     <option selected disabled hidden>Filter by Region</option>
                     <option value="asia">Asia</option>
@@ -32,9 +37,10 @@
                 </select>
             </div>
             <div class="flags" id="flags">
-                
+
             </div>
         </div>
     </main>
 </body>
+
 </html>
