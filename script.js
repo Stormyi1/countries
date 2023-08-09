@@ -74,7 +74,7 @@ async function FilterRegion(){
             const countryName = document.createElement("h3")
             countryName.innerText = y[i]["name"]
             const population = document.createElement("p")
-            population.innerHTML = `<b>Population:</b> ${y[i]["population"]}`
+            population.innerHTML = `<b>Population:</b> ${y[i]["population"].toLocaleString()}`
             const continent = document.createElement("p")
             continent.innerHTML = `<b>Region:</b> ${y[i]["region"]}`
             const capital = document.createElement("p")
