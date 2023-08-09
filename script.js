@@ -29,6 +29,7 @@ function AppendAll(y){
         itemContent.appendChild(container)
         
         img.src = y[i]["flags"]["png"]
+        img.alt = "Flag of " + y[i]["name"]["common"]
         item.appendChild(img)
         item.appendChild(itemContent)
         button.appendChild(item)
@@ -87,7 +88,7 @@ async function FilterRegion(){
             itemContent.appendChild(container)
             
             img.src = y[i]["flags"]["png"]
-            item.appendChild(img)
+            img.alt = "Flag of " + y[i]["name"]["common"]
             item.appendChild(itemContent)
             flagContainer.appendChild(item)
         }
