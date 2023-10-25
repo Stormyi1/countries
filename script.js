@@ -62,18 +62,26 @@ async function GetSpecific(){
 }
 
 async function FilterRegion(){
-    const res = await fetch(`https://restcountries.com/v2/region/${regionSelect.value}`)
+    const res = await fetch(`https://restcountries.com/v3.1/region/${regionSelect.value}`)
     .then(x => x.json()).then(y => {
         RemoveAll()
-
+        console.log(y)
         for (let i = 0; i < y.length; i++) {
+            if(y[i]["capital"] == undefined){
+                y[i]["capital"] = "Not Available"
+            }
+
+            if(y[i]["region"] == "Americas"){
+                y[i]["region"] = "America"
+            }
+
             let item = document.createElement("div")
             item.classList.add("item")
             const img = document.createElement('img')
             const itemContent = document.createElement("div")
             itemContent.classList.add("itemContent")
             const countryName = document.createElement("h3")
-            countryName.innerText = y[i]["name"]
+            countryName.innerText = y[i]["name"]["common"]
             const population = document.createElement("p")
             population.innerHTML = `<b>Population:</b> ${y[i]["population"].toLocaleString()}`
             const continent = document.createElement("p")
@@ -89,6 +97,7 @@ async function FilterRegion(){
             
             img.src = y[i]["flags"]["png"]
             img.alt = "Flag of " + y[i]["name"]["common"]
+            item.appendChild(img)
             item.appendChild(itemContent)
             flagContainer.appendChild(item)
         }
