@@ -3,6 +3,7 @@ const countrySearch = document.getElementById("countrySearch")
 const regionSelect = document.getElementById("regionSelect")
 
 window.onload += GetAll()
+
 function AppendAll(y){
     for (let i = 0; i < y.length; i++) {
         let button = document.createElement("a")
@@ -75,6 +76,9 @@ async function FilterRegion(){
                 y[i]["region"] = "America"
             }
 
+            let button = document.createElement("a")
+            button.classList.add("nostyle")
+            button.setAttribute("href", `detail.html?country=${y[i]["name"]["common"]}`)
             let item = document.createElement("div")
             item.classList.add("item")
             const img = document.createElement('img')
@@ -99,7 +103,8 @@ async function FilterRegion(){
             img.alt = "Flag of " + y[i]["name"]["common"]
             item.appendChild(img)
             item.appendChild(itemContent)
-            flagContainer.appendChild(item)
+            button.appendChild(item)
+            flagContainer.appendChild(button)
         }
     })
 }
